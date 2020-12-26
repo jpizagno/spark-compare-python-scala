@@ -1,7 +1,8 @@
 
 The goal is to compare the runtimes of Scala vs Python in a Spark context. This runs the exact same logic in Spark, but one version is scala and another version is written in Python.
 The results are that the median Scala runtime is 30.61 seconds (std-dev = 1.51 sec) and the Python implementation median 
-runtime is 111.60 seconds (std-dev 10.53).   Or in other words, Scala is about 3.6 X-times (111.60/30.61) faster than Python. 
+runtime is 111.60 seconds (std-dev 10.53).   
+**Or in other words, Scala is about 3.6 X-times (111.60/30.61) faster than Python.**
 
 
 ## Build
@@ -71,6 +72,7 @@ run time is 32.587 seconds
  *******************
 ```
 Here are 10 Scala runs:  32.587, 32.005, 32.375, 30.41, 30.199, 26.941, 30.221, 30.677, 31.0, 30.534
+
 median = 30.61
 stddev = 1.51
 
@@ -85,29 +87,6 @@ took 144.828240156 seconds
 ...
 ```
 Here are 10 Python runs:  144.828, 113.5989, 111.128, 115.289, 112.065, 104.546, 109.338, 109.852, 109.852, 115.832
+
 median = 111.60
 stddev = 10.53
-
-## Extra:  SBT Specific Build and Test
-
-to compile
-```
-./sbt compile
-```
-
-to test:
-```
-./sbt it:test
-./sbt test
-```
-
-to run:
-```
-./sbt run
-```
-
-to package:
-```
-./sbt assembly
-/target/scala-2.11/news-matcher-assembly-2f43a4ad3760da95174b4881e5cfce0ca5387611-SNAPSHOT.jar
-```
