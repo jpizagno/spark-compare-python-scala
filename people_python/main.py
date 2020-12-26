@@ -27,8 +27,6 @@ def main():
         .schema(schema) \
         .load("/tmp/name_data.csv")
 
-    # people.count():  22seconds,
-
     new_id_udf = udf(new_id, DoubleType())
 
     people_new_ids = people.withColumn("new_id", new_id_udf("id"))
